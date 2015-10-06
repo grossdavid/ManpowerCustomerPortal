@@ -1,0 +1,21 @@
+﻿@using System.Linq.Expressions
+@using System.Web.Mvc
+@using EPiServer.Core
+@using EPiServer.Editor
+@using EPiServer.Web.Mvc.Html
+
+@model Manpower.CustomerPortal.Web.Models.ViewModels.StartPageViewModel
+
+
+@{
+    Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
+}
+
+
+<h2>Manpower kundportal</h2>
+
+<p>
+    
+    <a href="@Html.PropertyFor(x => x.CustomerReportDownloadUrl)" target="_blank">Ladda ner rapport</a>
+</p>
+

@@ -1,0 +1,19 @@
+﻿
+@using EPiServer.Cms.Shell
+@using EPiServer.Core
+@model Manpower.CustomerPortal.Web.Models.ViewModels.DocumentListViewModel
+
+@{
+    ViewBag.Title = "DocumentList";
+    Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
+}
+
+<h2>Gamla rapporter</h2>
+
+@foreach (var doc in Model.Documents)
+{
+    <div>
+        <a href="@doc.DownloadUrl()" target="_blank">@doc.Name</a>
+    </div>
+}
+

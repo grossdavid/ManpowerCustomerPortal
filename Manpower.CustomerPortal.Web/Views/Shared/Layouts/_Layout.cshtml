@@ -1,0 +1,24 @@
+﻿
+
+@model Manpower.CustomerPortal.Web.Models.ViewModels.IPageViewModel<Manpower.CustomerPortal.ContentTypes.Pages.Base.PageTypeBase>
+
+@helper GetPageTitle()
+{
+    if (Model.CurrentPage != null)
+    {
+        <text>@Model.CurrentPage.PageName</text>
+    }
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@GetPageTitle()</title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
